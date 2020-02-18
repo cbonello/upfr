@@ -1,3 +1,4 @@
+import 'package:easy_google_maps/easy_google_maps.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -91,13 +92,18 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Container(
+                height: 400.0,
+                width: 400.0,
+                child: EasyGoogleMaps(
+                  apiKey: 'AIzaSyBZN4hGICtStkA2ff1M3krReFMw-PpDJQs',
+                  address: 'Infinite Loop, Cupertino, CA 95014',
+                  title: 'Apple Campus',
+                )),
             Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Text('$_counter'),
           ],
         ),
       ),

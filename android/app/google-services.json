@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "725122937532",
+    "firebase_url": "https://upfr-2020.firebaseio.com",
+    "project_id": "upfr-2020",
+    "storage_bucket": "upfr-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725122937532:android:368e0332e5aaa57bd096b9",
+        "android_client_info": {
+          "package_name": "com.example.upfr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725122937532-045lnjsu7pdmfcioi90pc3g51sp5uiq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.upfr",
+            "certificate_hash": "dff07702c34f7a0be535e63d889650847e23c56a"
+          }
+        },
+        {
+          "client_id": "725122937532-5qp7jj1ejve58mci5ok4j0rl7otr0k2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT4BA6406YivXJHNCfywEFQ-EL-1cBrLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725122937532-5qp7jj1ejve58mci5ok4j0rl7otr0k2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
