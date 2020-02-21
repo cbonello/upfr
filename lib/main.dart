@@ -12,7 +12,7 @@ Future<void> main() async {
   BlocSupervisor.delegate = SimpleBlocDelegate();
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (BuildContext context) {
         return MultiBlocProvider(
           providers: [
