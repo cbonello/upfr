@@ -1,6 +1,8 @@
-# upfr
+# UPFR
 
 Prototype of an event reservation app to experiment with firebase remote config, Google maps and design scaling.
+
+I honestly don't remember why I choose such a cryptic project name. It probably does not matter too much for a prototype anyway :smile:
 
 ## Setup
 
@@ -58,7 +60,7 @@ I believe that the image used in this demo app are royalty free. Images were dow
 ## License
 
 ```
-Copyright (c) 2019 Christophe Bonello
+Copyright (c) 2020 Christophe Bonello
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
