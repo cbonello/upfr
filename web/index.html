@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+
+  <meta name="google-signin-client_id"
+    content="725122937532-5qp7jj1ejve58mci5ok4j0rl7otr0k2j.apps.googleusercontent.com">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,10 +18,12 @@
   <title>upfr</title>
   <link rel="manifest" href="/manifest.json">
 </head>
+
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+  <script src="./app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
@@ -27,4 +33,5 @@
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
+
 </html>
