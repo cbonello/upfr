@@ -38,7 +38,6 @@ class SignInBloc extends Bloc<SigninBlocEvent, SignInBlocState> {
       }
     } catch (exception, stacktrace) {
       print(stacktrace);
-      print(exception);
       yield SigninError(AppException.from(exception));
     }
   }

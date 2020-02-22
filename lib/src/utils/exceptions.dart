@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 
+// My go to exception class. Probably overkill for this demo though...
 class AppException implements Exception {
   const AppException(this.message);
 
