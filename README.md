@@ -6,6 +6,8 @@ I honestly don't remember why I choose such a cryptic project name. It probably 
 
 ## Setup
 
+**Important:** You need the latest version of the Flutter SDK from the beta channel to compile this project.
+
 1. Create a firebase project and copy `google-services.json` to the `android/app/` folder.
 2. Generate a Google Maps API key.
 3. Update `android/app/src/main/AndroidManifest.xml` with your Google Maps API key. See [Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/get-api-key).
