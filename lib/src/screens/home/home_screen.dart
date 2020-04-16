@@ -16,6 +16,20 @@ class HomeScreen extends StatefulWidget {
   final FirebaseUser _user;
   final RemoteConfig _remoteConfig;
 
+  static Route<dynamic> route(
+    RouteSettings settings,
+    FirebaseUser user,
+    RemoteConfig remoteConfig,
+  ) {
+    return MaterialPageRoute(
+      settings: settings,
+      builder: (BuildContext context) => HomeScreen(
+        user: user,
+        remoteConfig: remoteConfig,
+      ),
+    );
+  }
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }

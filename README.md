@@ -7,11 +7,13 @@ I honestly don't remember why I choose such a cryptic project name. It probably 
 ## Setup
 
 **Important:** You need the latest version of the Flutter SDK from the beta channel to compile this project.
+See [Building a web application with Flutter](https://flutter.dev/docs/get-started/web).
 
+1. Create a Firebase project in the [Firebase Console](https://console.firebase.google.com) and a web app to the project.
 1. Create a firebase project and copy `google-services.json` to the `android/app/` folder.
-2. Generate a Google Maps API key.
-3. Update `android/app/src/main/AndroidManifest.xml` with your Google Maps API key. See [Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/get-api-key).
-4. In the Firebase console, scroll down to the `Grow` menu option and select `Remote Config`. Associate a key named 'GOOGLE_MAP_KEY' with your Google Maps API key (check this [stackoverflow answer](https://stackoverflow.com/a/57384744/12120177)).
+1. Generate a Google Maps API key.
+1. Update `android/app/src/main/AndroidManifest.xml` with your Google Maps API key. See [Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/get-api-key).
+1. In the Firebase console, scroll down to the `Grow` menu option and select `Remote Config`. Associate a key named 'GOOGLE_MAP_KEY' with your Google Maps API key (check this [stackoverflow answer](https://stackoverflow.com/a/57384744/12120177)).
 
 ## Current Implementation Status
 
@@ -48,6 +50,7 @@ Here are a few resources to get you started if you are new to Flutter:
 [![License](https://img.shields.io/badge/license-MIT-purple)](https://github.com/cbonello/amiidex/blob/master/LICENSE)
 
 ## Contribution Guidelines
+
 This project is a fully open source project, and contributions are welcome.
 
 ## Credits
@@ -57,7 +60,6 @@ I believe that the image used in this demo app are royalty free. Images were dow
 - [Empire State Building](https://en.wikipedia.org/wiki/Empire_State_Building)
 - [Chrysler Building](https://www.askideas.com/amazing-view-of-chrysler-building-manhattan/)
 - [Statue of Liberty](https://www.pxfuel.com/en/free-photo-xshlz)
-
 
 ## License
 

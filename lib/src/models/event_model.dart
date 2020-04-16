@@ -1,4 +1,4 @@
-import 'package:meta/meta.dart';
+import 'package:flutter/foundation.dart';
 import 'package:upfr/src/models/address_model.dart';
 
 class EventModel {

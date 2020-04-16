@@ -13,7 +13,10 @@ class MapScreen extends StatefulWidget {
   final EventModel _event;
   final RemoteConfig _remoteConfig;
 
-  static Route<dynamic> route(EventModel event, RemoteConfig remoteConfig) {
+  static Route<dynamic> route(
+    EventModel event,
+    RemoteConfig remoteConfig,
+  ) {
     return MaterialPageRoute(
       builder: (BuildContext context) => MapScreen(
         event: event,
