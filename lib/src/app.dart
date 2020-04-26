@@ -1,7 +1,9 @@
+import 'package:device_preview/device_preview.dart' as dp;
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:upfr/configuration.dart';
 import 'package:upfr/src/blocs/authentication/authentication_bloc.dart';
 import 'package:upfr/src/screens/home/home_screen.dart';
 import 'package:upfr/src/screens/signin_screen.dart';
@@ -22,6 +24,8 @@ class UPFRApp extends StatelessWidget {
             ? MaterialApp(
                 title: 'Event Manager',
                 debugShowCheckedModeBanner: false,
+                locale: kUseDevicePreview ? dp.DevicePreview.of(context).locale : null,
+                builder: kUseDevicePreview ? dp.DevicePreview.appBuilder : null,
                 themeMode: ThemeMode.system,
                 theme: AppTheme.theme(Brightness.light),
                 darkTheme: AppTheme.theme(Brightness.dark),
