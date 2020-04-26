@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 
-class AddressModel {
+class AddressModel extends Equatable {
   const AddressModel({
     @required this.street,
     this.suite,
@@ -19,7 +20,15 @@ class AddressModel {
   final GeoPoint geo;
 
   @override
-  String toString() {
-    return '$street, $city, $state, $zipcode';
-  }
+  List<Object> get props => <Object>[
+        street,
+        suite,
+        city,
+        state,
+        zipcode,
+        geo,
+      ];
+
+  @override
+  bool get stringify => true;
 }

@@ -18,7 +18,7 @@ class UserSignedIn extends AuthenticationBlocEvent {
   List<Object> get props => <Object>[user];
 
   @override
-  String toString() => 'SignedIn { user: $user }';
+  bool get stringify => true;
 }
 
 class UserSignedOut extends AuthenticationBlocEvent {}

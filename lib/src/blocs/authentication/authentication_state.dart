@@ -18,5 +18,5 @@ class Authenticated extends AuthenticationBlocState {
   List<Object> get props => <Object>[user];
 
   @override
-  String toString() => 'Authenticated { user : $user }';
+  bool get stringify => true;
 }

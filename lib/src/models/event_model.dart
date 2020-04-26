@@ -1,7 +1,8 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:upfr/src/models/address_model.dart';
 
-class EventModel {
+class EventModel extends Equatable {
   const EventModel({
     @required this.picture,
     @required this.title,
@@ -17,13 +18,14 @@ class EventModel {
   final String description;
 
   @override
-  String toString() {
-    return '''EventModel {
-      pictureUrl: $picture,
-      title,: $title,
-      date: $date, 
-      address: $address,
-      description: $description,
-    }''';
-  }
+  List<Object> get props => <Object>[
+        picture,
+        title,
+        date,
+        address,
+        description,
+      ];
+
+  @override
+  bool get stringify => true;
 }

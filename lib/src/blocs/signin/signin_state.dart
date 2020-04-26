@@ -18,7 +18,7 @@ class SignedIn extends SignInBlocState {
   List<Object> get props => <Object>[user];
 
   @override
-  String toString() => 'SignedIn { user : $user }';
+  bool get stringify => true;
 }
 
 class SigninError extends SignInBlocState {
@@ -30,5 +30,5 @@ class SigninError extends SignInBlocState {
   List<Object> get props => <Object>[exception];
 
   @override
-  String toString() => 'SigninError { exception : $exception }';
+  bool get stringify => true;
 }
