@@ -1,5 +1,5 @@
 name: upfr
-description: A new Flutter project.
+description: Prototype of an event reservation app.
 
 version: 1.0.0+1
 
@@ -11,14 +11,14 @@ dependencies:
   cupertino_icons: ^0.1.0
   device_preview: ^0.4.0
   easy_google_maps: ^1.0.0
-  equatable: ^1.1.0
+  equatable: ^1.2.0
   firebase_auth: ^0.16.0
   firebase_remote_config: ^0.3.0
   flutter:
     sdk: flutter
   flutter_auth_buttons: ^0.8.0
   flutter_bloc: ^4.0.0
-  get_it: ^3.1.0
+  get_it: ^4.0.0
   google_sign_in: ^4.4.0
   intl: ^0.16.0
 
