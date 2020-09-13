@@ -10,7 +10,7 @@ import 'package:upfr/src/blocs/signin/signin_bloc.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  BlocSupervisor.delegate = SimpleBlocDelegate();
+  Bloc.observer = SimpleBlocObserver();
   runApp(
     DevicePreview(
       enabled: kUseDevicePreview,

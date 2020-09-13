@@ -17,7 +17,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_auth_buttons: ^0.8.0
-  flutter_bloc: ^4.0.0
+  flutter_bloc: ^6.0.0
   get_it: ^4.0.0
   google_sign_in: ^4.4.0
   intl: ^0.16.0

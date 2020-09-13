@@ -27,7 +27,8 @@ class _EventsViewerState extends State<EventsViewer> {
     return StreamBuilder<List<EventModel>>(
       stream: eventsRepository.readEvents(),
       initialData: <EventModel>[],
-      builder: (BuildContext context, AsyncSnapshot<List<EventModel>> snapshot) {
+      builder:
+          (BuildContext context, AsyncSnapshot<List<EventModel>> snapshot) {
         if (snapshot.hasData) {
           return Expanded(
             child: PageView.builder(
@@ -95,8 +96,8 @@ class EventCard extends StatelessWidget {
                         },
                         child: const Text(
                           'Register',
-                          style:
-                              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -118,7 +119,7 @@ class EventCard extends StatelessWidget {
                     const SizedBox(height: 10.0),
                     Text(
                       DateFormat('MMMM d, y - ').add_jm().format(_event.date),
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.subtitle2,
                       maxLines: 1,
                       overflow: TextOverflow.clip,
                     ),
@@ -162,13 +163,13 @@ class _EventAddress extends StatelessWidget {
       children: <Widget>[
         Text(
           _streetSuite(_event.address),
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyText2,
           maxLines: 1,
           overflow: TextOverflow.clip,
         ),
         Text(
           _cityStateZip(_event.address),
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyText2,
           maxLines: 1,
           overflow: TextOverflow.clip,
         ),

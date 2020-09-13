@@ -28,13 +28,13 @@ class UserIdentity extends StatelessWidget {
               children: <Widget>[
                 Text(
                   _user.displayName,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headline6,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   _user.email ?? '',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.subtitle2,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),

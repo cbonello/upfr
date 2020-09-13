@@ -10,10 +10,9 @@ part 'signin_event.dart';
 part 'signin_state.dart';
 
 class SignInBloc extends Bloc<SigninBlocEvent, SignInBlocState> {
-  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  SignInBloc() : super(SigninBlocInitial());
 
-  @override
-  SignInBlocState get initialState => SigninBlocInitial();
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   @override
   Stream<SignInBlocState> mapEventToState(SigninBlocEvent event) async* {

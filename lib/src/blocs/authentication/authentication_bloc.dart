@@ -9,14 +9,15 @@ import 'package:google_sign_in/google_sign_in.dart';
 part 'authentication_event.dart';
 part 'authentication_state.dart';
 
-class AuthenticationBloc extends Bloc<AuthenticationBlocEvent, AuthenticationBlocState> {
+class AuthenticationBloc
+    extends Bloc<AuthenticationBlocEvent, AuthenticationBlocState> {
+  AuthenticationBloc() : super(Unauthenticated());
+
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   @override
-  AuthenticationBlocState get initialState => Unauthenticated();
-
-  @override
-  Stream<AuthenticationBlocState> mapEventToState(AuthenticationBlocEvent event) async* {
+  Stream<AuthenticationBlocState> mapEventToState(
+      AuthenticationBlocEvent event) async* {
     if (event is AppStarted) {
       yield* _mapUnauthenticatedEventToState();
     } else if (event is UserSignedIn) {
@@ -35,7 +36,8 @@ class AuthenticationBloc extends Bloc<AuthenticationBlocEvent, AuthenticationBlo
     }
   }
 
-  Stream<AuthenticationBlocState> _mapSignedInToState(FirebaseUser user) async* {
+  Stream<AuthenticationBlocState> _mapSignedInToState(
+      FirebaseUser user) async* {
     yield Authenticated(user);
   }
 
