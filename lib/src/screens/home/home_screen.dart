@@ -7,9 +7,11 @@ import 'package:upfr/src/screens/home/events_viewer.dart';
 import 'package:upfr/src/screens/home/user_identity.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen(
-      {Key key, @required FirebaseUser user, @required RemoteConfig remoteConfig})
-      : _user = user,
+  const HomeScreen({
+    Key key,
+    @required FirebaseUser user,
+    @required RemoteConfig remoteConfig,
+  })  : _user = user,
         _remoteConfig = remoteConfig,
         super(key: key);
 
@@ -52,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       title: Text('Sign Out'),
                       onTap: () {
                         Navigator.of(context).pop();
-                        context.bloc<AuthenticationBloc>().add(UserSignedOut());
+                        context.read<AuthenticationBloc>().add(UserSignedOut());
                       },
                     ),
                   ),

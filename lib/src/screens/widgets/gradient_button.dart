@@ -9,8 +9,8 @@ class GradientButton extends StatelessWidget {
     this.height = 50.0,
     this.onPressed,
   })  : assert(child != null),
-        assert(gradient != null),
         _child = child,
+        assert(gradient != null),
         _gradient = gradient,
         super(key: key);
 
