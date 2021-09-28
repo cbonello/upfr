@@ -17,14 +17,12 @@ class _SignInScreenState extends State<SignInScreen> {
         body: BlocListener<SignInBloc, SignInBlocState>(
           listener: (BuildContext context, SignInBlocState state) async {
             if (state is SigninError) {
-              Scaffold.of(context).showSnackBar(
+              ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(content: Text('ERROR')),
               );
             } else if (state is SignedIn) {
               assert(state.user != null);
-              context
-                  .read<AuthenticationBloc>()
-                  .add(UserSignedIn(user: state.user));
+              context.read<AuthenticationBloc>().add(UserSignedIn(user: state.user));
             }
           },
           child: LayoutBuilder(
@@ -41,9 +39,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     GoogleSignInButton(
                       borderRadius: 4.0,
                       darkMode: Theme.of(context).brightness == Brightness.dark,
-                      onPressed: () => context
-                          .read<SignInBloc>()
-                          .add(SignInWithGooglePressed()),
+                      onPressed: () => context.read<SignInBloc>().add(SignInWithGooglePressed()),
                     ),
                     const Spacer(flex: 2),
                   ],
